@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Klaudia & Rafał - Nasze Wesele</title>
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -28,6 +31,25 @@
             <h1>Klaudia & Rafał</h1>
             <p class="date">5 września 2026</p>
             <p class="subtitle">Zapraszamy na nasz wielki dzień!</p>
+            
+            <div class="countdown" id="countdown">
+                <div class="countdown-item">
+                    <span class="countdown-number" id="days">0</span>
+                    <span class="countdown-label">dni</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="hours">0</span>
+                    <span class="countdown-label">godzin</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="minutes">0</span>
+                    <span class="countdown-label">minut</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="seconds">0</span>
+                    <span class="countdown-label">sekund</span>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -256,9 +278,14 @@
                 <img src="kod_qr_wesele.jpg" alt="Kod QR do strony" class="qr-code">
                 <p>Zeskanuj kod QR, aby otworzyć stronę</p>
             </div>
-            <p>&copy; 2024 Klaudia & Rafał - Z miłością dla naszych gości</p>
+            <p>&copy; 2026 Klaudia & Rafał - Z miłością dla naszych gości</p>
         </div>
     </footer>
+
+    <!-- Floating RSVP Button -->
+    <a href="#potwierdzenie" class="floating-btn" title="Potwierdź obecność">
+        💌
+    </a>
 
     <script src="scripts/main.js"></script>
 </body>

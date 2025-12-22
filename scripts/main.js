@@ -12,6 +12,41 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// Countdown do ślubu
+function updateCountdown() {
+    const weddingDate = new Date('2026-09-05T15:00:00').getTime();
+    const now = new Date().getTime();
+    const distance = weddingDate - now;
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById('days').textContent = days;
+    document.getElementById('hours').textContent = hours;
+    document.getElementById('minutes').textContent = minutes;
+    document.getElementById('seconds').textContent = seconds;
+
+    if (distance < 0) {
+        document.getElementById('countdown').innerHTML = '<h2 style="color: white;">Dziś jest nasz wielki dzień! 💍</h2>';
+    }
+}
+
+// Aktualizuj countdown co sekundę
+setInterval(updateCountdown, 1000);
+updateCountdown();
+
+// Navbar scroll effect
+window.addEventListener('scroll', function() {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+});
+
 // Obsługa formularza RSVP
 document.querySelector('.rsvp-form').addEventListener('submit', function(e) {
     e.preventDefault();
@@ -47,7 +82,7 @@ document.querySelectorAll('.section').forEach(section => {
 });
 
 // Powiększanie zdjęć w galerii
-document.querySelectorAll('.gallery-grid img').forEach(img => {
+document.querySelectorAll('.gallery-grid img, .venue-gallery img').forEach(img => {
     img.addEventListener('click', function() {
         const modal = document.createElement('div');
         modal.style.cssText = `
@@ -56,12 +91,13 @@ document.querySelectorAll('.gallery-grid img').forEach(img => {
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0,0,0,0.9);
+            background: rgba(0,0,0,0.95);
             display: flex;
             align-items: center;
             justify-content: center;
             z-index: 2000;
             cursor: pointer;
+            animation: fadeIn 0.3s ease;
         `;
         
         const modalImg = document.createElement('img');
@@ -70,13 +106,29 @@ document.querySelectorAll('.gallery-grid img').forEach(img => {
             max-width: 90%;
             max-height: 90%;
             border-radius: 10px;
+            box-shadow: 0 10px 50px rgba(0,0,0,0.5);
         `;
         
         modal.appendChild(modalImg);
         document.body.appendChild(modal);
         
         modal.addEventListener('click', function() {
-            document.body.removeChild(modal);
+            modal.style.animation = 'fadeOut 0.3s ease';
+            setTimeout(() => document.body.removeChild(modal), 300);
         });
     });
 });
+
+// Dodaj style dla animacji
+const style = document.createElement('style');
+style.textContent = `
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    @keyframes fadeOut {
+        from { opacity: 1; }
+        to { opacity: 0; }
+    }
+`;
+document.head.appendChild(style);
