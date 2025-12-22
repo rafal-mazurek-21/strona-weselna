@@ -96,7 +96,7 @@ h1, h2, h3 {
 @media (max-width: 768px) {
     .hero {
         background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('../zdjecia_para/hero-mobile.jpg') !important;
-        background-position: center center !important;
+        background-position: center 15% !important;
         background-attachment: scroll !important;
     }
 }
