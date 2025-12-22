@@ -1,0 +1,41 @@
+=== TREŚCI DO EDYCJI ===
+
+IMIONA PARY MŁODEJ:
+- Panna Młoda: Anna Kowalska
+- Pan Młody: Piotr Nowak
+
+DATA ŚLUBU:
+15 czerwca 2024
+
+OPIS PANNY MŁODEJ:
+Miłośniczka książek, kawy i długich spacerów. Nie wyobrażam sobie życia bez śmiechu i przygód z moim ukochanym.
+
+OPIS PANA MŁODEGO:
+Pasjonat gór, dobrej muzyki i gotowania. Z Anią znalazłem swoją drugą połówkę i najlepszą przyjaciółkę.
+
+HISTORIA MIŁOŚCI:
+Poznaliśmy się 5 lat temu na wspólnych wakacjach w górach. Od pierwszego spojrzenia wiedzieliśmy, że to coś wyjątkowego. Po trzech latach związku, podczas romantycznego weekendu nad morzem, Piotr oświadczył się Annie. Teraz nie możemy się doczekać, aby podzielić się naszym szczęściem z Wami!
+
+CEREMONIA ŚLUBNA:
+- Miejsce: Kościół św. Anny
+- Adres: ul. Kwiatowa 15, Warszawa
+- Godzina: 14:00
+- Parking: Dostępny przy kościele
+
+PRZYJĘCIE WESELNE:
+- Miejsce: Dwór Romantyczny
+- Adres: ul. Parkowa 7, Konstancin-Jeziorna
+- Godzina: 17:00
+- Parking: Duży parking dla gości
+- Nocleg: Możliwość noclegu na miejscu
+
+TERMIN POTWIERDZENIA:
+1 maja 2024
+
+=== INSTRUKCJE ===
+
+Aby zmienić te treści na stronie:
+1. Otwórz plik index.html
+2. Znajdź odpowiednią sekcję (używając Ctrl+F)
+3. Zamień tekst na swój
+4. Zapisz plik

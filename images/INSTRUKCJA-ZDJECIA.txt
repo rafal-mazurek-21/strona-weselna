@@ -1,0 +1,56 @@
+📸 INSTRUKCJA DODAWANIA ZDJĘĆ
+
+=== STRUKTURA FOLDERÓW ===
+
+images/
+├── hero/           → Zdjęcie tła głównego
+├── para-mloda/     → Zdjęcia pary młodej
+├── ceremonia/      → Zdjęcia kościoła
+├── wesele/         → Zdjęcia sali weselnej
+└── galeria/        → Zdjęcia do galerii
+
+=== WYMAGANE ZDJĘCIA ===
+
+1. HERO (Tło główne)
+   Folder: images/hero/
+   Nazwa: hero-bg.jpg
+   Rozmiar: 1920x1080px lub większy
+   Opis: Piękne zdjęcie pary, krajobraz, lub coś romantycznego
+
+2. PARA MŁODA
+   Folder: images/para-mloda/
+   Pliki:
+   - panna-mloda.jpg (500x500px, kwadratowe)
+   - pan-mlody.jpg (500x500px, kwadratowe)
+
+3. CEREMONIA
+   Folder: images/ceremonia/
+   Nazwa: kosciol.jpg
+   Opis: Zdjęcie kościoła lub miejsca ceremonii
+
+4. WESELE
+   Folder: images/wesele/
+   Nazwa: sala.jpg
+   Opis: Zdjęcie sali weselnej lub miejsca przyjęcia
+
+5. GALERIA
+   Folder: images/galeria/
+   Nazwy: zdjecie1.jpg, zdjecie2.jpg, zdjecie3.jpg, itd.
+   Możesz dodać dowolną liczbę zdjęć
+
+=== JAK DODAĆ ZDJĘCIA ===
+
+1. Przygotuj zdjęcia (zmniejsz rozmiar do max 2MB każde)
+2. Zmień nazwy plików zgodnie z powyższą instrukcją
+3. Skopiuj pliki do odpowiednich folderów
+4. Odśwież stronę w przeglądarce
+
+=== TYMCZASOWE ROZWIĄZANIE ===
+
+Jeśli nie masz jeszcze zdjęć, możesz użyć:
+- Placeholder.com: https://placeholder.com/
+- Unsplash: https://unsplash.com/ (darmowe zdjęcia)
+- Pexels: https://pexels.com/ (darmowe zdjęcia)
+
+Przykład URL placeholder:
+https://via.placeholder.com/1920x1080/8B7355/FFFFFF?text=Twoje+Zdjecie

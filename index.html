@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anna & Piotr - Nasze Wesele</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="#home">Start</a>
+            <a href="#para-mloda">Para Młoda</a>
+            <a href="#ceremonia">Ceremonia</a>
+            <a href="#wesele">Wesele</a>
+            <a href="#galeria">Galeria</a>
+            <a href="#potwierdzenie">Potwierdzenie</a>
+        </div>
+    </nav>
+
+    <section id="home" class="hero"
+        style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1519741497674-611481863552?w=1920') center/cover;">
+        <div class="hero-content">
+            <h1>Anna & Piotr</h1>
+            <p class="date">15 czerwca 2024</p>
+            <p class="subtitle">Zapraszamy na nasz wielki dzień!</p>
+        </div>
+    </section>
+
+    <section id="para-mloda" class="section">
+        <div class="container">
+            <h2>Para Młoda</h2>
+            <div class="couple-grid">
+                <div class="person">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&h=500&fit=crop"
+                        alt="Panna Młoda">
+                    <h3>Anna Kowalska</h3>
+                    <p>Miłośniczka książek, kawy i długich spacerów. Nie wyobrażam sobie życia bez śmiechu i przygód z
+                        moim ukochanym.</p>
+                </div>
+                <div class="person">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=500&fit=crop"
+                        alt="Pan Młody">
+                    <h3>Piotr Nowak</h3>
+                    <p>Pasjonat gór, dobrej muzyki i gotowania. Z Anią znalazłem swoją drugą połówkę i najlepszą
+                        przyjaciółkę.</p>
+                </div>
+            </div>
+            <div class="love-story">
+                <h3>Nasza Historia</h3>
+                <p>Poznaliśmy się 5 lat temu na wspólnych wakacjach w górach. Od pierwszego spojrzenia wiedzieliśmy, że
+                    to coś wyjątkowego. Po trzech latach związku, podczas romantycznego weekendu nad morzem, Piotr
+                    oświadczył się Annie. Teraz nie możemy się doczekać, aby podzielić się naszym szczęściem z Wami!</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="ceremonia" class="section bg-light">
+        <div class="container">
+            <h2>Ceremonia Ślubna</h2>
+            <div class="event-details">
+                <img src="https://images.unsplash.com/photo-1519167758481-83f29da8c2b6?w=800" alt="Kościół">
+                <div class="details">
+                    <h3>Kościół św. Anny</h3>
+                    <p><strong>Adres:</strong> ul. Kwiatowa 15, Warszawa</p>
+                    <p><strong>Godzina:</strong> 14:00</p>
+                    <p><strong>Parking:</strong> Dostępny przy kościele</p>
+                    <a href="https://maps.google.com" class="btn" target="_blank">Zobacz na mapie</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="wesele" class="section">
+        <div class="container">
+            <h2>Przyjęcie Weselne</h2>
+            <div class="event-details">
+                <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=800" alt="Sala weselna">
+                <div class="details">
+                    <h3>Dwór Romantyczny</h3>
+                    <p><strong>Adres:</strong> ul. Parkowa 7, Konstancin-Jeziorna</p>
+                    <p><strong>Godzina:</strong> 17:00</p>
+                    <p><strong>Parking:</strong> Duży parking dla gości</p>
+                    <p><strong>Nocleg:</strong> Możliwość noclegu na miejscu</p>
+                    <a href="https://maps.google.com" class="btn" target="_blank">Zobacz na mapie</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="galeria" class="section bg-light">
+        <div class="container">
+            <h2>Galeria</h2>
+            <div class="gallery-grid">
+                <img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?w=600" alt="Zdjęcie 1">
+                <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=600" alt="Zdjęcie 2">
+                <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=600" alt="Zdjęcie 3">
+                <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=600" alt="Zdjęcie 4">
+                <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=600" alt="Zdjęcie 5">
+                <img src="https://images.unsplash.com/photo-1460978812857-470ed1c77af0?w=600" alt="Zdjęcie 6">
+            </div>
+        </div>
+    </section>
+
+    <section id="potwierdzenie" class="section">
+        <div class="container">
+            <h2>Potwierdzenie Obecności</h2>
+            <p class="center">Prosimy o potwierdzenie obecności do 1 maja 2024</p>
+            <form class="rsvp-form">
+                <input type="text" placeholder="Imię i nazwisko" required>
+                <input type="email" placeholder="Email" required>
+                <input type="tel" placeholder="Telefon" required>
+                <select required>
+                    <option value="">Liczba osób</option>
+                    <option value="1">1 osoba</option>
+                    <option value="2">2 osoby</option>
+                    <option value="3">3 osoby</option>
+                    <option value="4">4 osoby</option>
+                </select>
+                <textarea placeholder="Dodatkowe informacje (alergie, dieta, itp.)"></textarea>
+                <button type="submit" class="btn">Potwierdź obecność</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Anna & Piotr - Z miłością dla naszych gości</p>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>

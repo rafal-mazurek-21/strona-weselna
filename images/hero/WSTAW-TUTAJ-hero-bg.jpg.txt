@@ -1,0 +1,3 @@
+Wstaw tutaj plik: hero-bg.jpg
+Rozmiar: 1920x1080px lub większy
+To będzie główne zdjęcie tła na górze strony
