@@ -92,6 +92,15 @@ h1, h2, h3 {
     background-attachment: fixed !important;
 }
 
+/* Osobne zdjęcie dla mobile (pionowe) */
+@media (max-width: 768px) {
+    .hero {
+        background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('../zdjecia_para/hero-mobile.jpg') !important;
+        background-position: center center !important;
+        background-attachment: scroll !important;
+    }
+}
+
 .hero::before {
     content: '';
     position: absolute;
@@ -430,7 +439,8 @@ footer {
     
     /* Lepsze pozycjonowanie zdjęcia na telefonie */
     .hero {
-        background-position: center 25% !important;
+        background-position: 50% 35% !important;
+        background-size: cover !important;
     }
     
     .hero-content .date {
