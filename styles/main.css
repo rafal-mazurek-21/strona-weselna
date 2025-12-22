@@ -135,6 +135,7 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     align-items: center;
+    margin-bottom: 2rem;
 }
 
 .event-details img {
@@ -152,6 +153,28 @@ body {
 .details p {
     margin-bottom: 0.8rem;
     font-size: 1.1rem;
+}
+
+/* Galeria przy opisach miejsc */
+.venue-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.venue-gallery img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.venue-gallery img:hover {
+    transform: scale(1.03);
 }
 
 /* Galeria */
