@@ -98,6 +98,15 @@ h1, h2, h3 {
         background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('../zdjecia_para/hero-mobile.jpg') !important;
         background-position: center 15% !important;
         background-attachment: scroll !important;
+        background-size: cover !important;
+        /* Fix dla iOS Safari */
+        min-height: 100vh;
+        min-height: -webkit-fill-available;
+    }
+    
+    /* Dodatkowe ustawienie dla iOS */
+    .hero::before {
+        background: linear-gradient(135deg, rgba(139, 115, 85, 0.3) 0%, rgba(212, 175, 55, 0.3) 100%);
     }
 }
 
