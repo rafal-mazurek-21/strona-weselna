@@ -1,0 +1,37 @@
+📸 JAK POBRAĆ I WSTAWIĆ PRAWDZIWE ZDJĘCIA
+
+=== HOTEL KMICIC ===
+
+1. Wejdź na: https://www.kmicichotel.pl/
+2. Kliknij prawym na zdjęcie hotelu/sali weselnej
+3. Wybierz "Zapisz obraz jako..."
+4. Zapisz jako: images/wesele/hotel-kmicic.jpg
+
+Następnie w pliku index.html znajdź:
+<img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=800" alt="Hotel Kmicic">
+
+Zamień na:
+<img src="images/wesele/hotel-kmicic.jpg" alt="Hotel Kmicic">
+
+=== KOŚCIÓŁ ŚW. MARCINA ===
+
+1. Wejdź na: https://www.psmlublin.pl/
+2. Znajdź zdjęcie kościoła
+3. Kliknij prawym na zdjęcie
+4. Wybierz "Zapisz obraz jako..."
+5. Zapisz jako: images/ceremonia/kosciol-marcin.jpg
+
+Następnie w pliku index.html znajdź:
+<img src="https://images.unsplash.com/photo-1519167758481-83f29da8c2b6?w=800" alt="Kościół św. Marcina">
+
+Zamień na:
+<img src="images/ceremonia/kosciol-marcin.jpg" alt="Kościół św. Marcina">
+
+=== ALTERNATYWNIE ===
+
+Możesz też zrobić własne zdjęcia tych miejsc podczas wizyty i wstawić je!
+
+=== AKTUALNE ZDJĘCIA ===
+
+Na razie używamy pięknych zdjęć z Unsplash jako placeholdery.
+Strona wygląda profesjonalnie, ale własne zdjęcia będą jeszcze lepsze!
