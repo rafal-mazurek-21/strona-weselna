@@ -161,7 +161,7 @@
             </div>
             <div class="venue-gallery">
                 <img src="zdjecia_hotel/sala.jpg" alt="Sala weselna w Hotelu Kmicic">
-                <img src="zdjecia_hotel/sala_stoly.jpg" alt="Hotel Kmicic - stoły weselne">
+                <img src="zdjecia_hotel/4FGCX7yX.jpg" alt="Hotel Kmicic - stoły weselne">
             </div>
         </div>
     </section>
@@ -250,7 +250,7 @@
 
                 <div class="location-card">
                     <h3>🏰 Hotel Kmicic</h3>
-                    <p><strong>Zemborzyce Dolne 62, 20-515 Lublin</strong></p>
+                    <p><strong>Zemborzyce Dolne 62, 20-492 Lublin</strong></p>
                     <p>📞 Tel: +48 81 756 60 00</p>
                     <img src="zdjecia_hotel/sala.jpg" alt="Hotel Kmicic - sala weselna"
                         style="width: 100%; border-radius: 10px; margin: 1rem 0;">
@@ -286,7 +286,7 @@
                 <img src="images/ceremonia/kosciol-marcin-2.jpg" alt="Kościół św. Marcina - wnętrze">
                 <img src="images/wesele/hotel-kmicic.jpg" alt="Hotel Kmicic">
                 <img src="zdjecia_hotel/sala.jpg" alt="Sala weselna w Hotelu Kmicic">
-                <img src="zdjecia_hotel/sala_stoly.jpg" alt="Stoły weselne w Hotelu Kmicic">
+                <img src="zdjecia_hotel/4FGCX7yX.jpg" alt="Stoły weselne w Hotelu Kmicic">
                 <img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?w=600" alt="Zdjęcie 1">
                 <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=600" alt="Zdjęcie 2">
                 <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=600" alt="Zdjęcie 3">
@@ -335,6 +335,24 @@
     </a>
 
     <script src="scripts/main.js"></script>
+    
+    <script>
+        // Sprawdź czy użytkownik ma dostęp
+        const sessionAccess = sessionStorage.getItem('weddingAccess');
+        const localAccess = localStorage.getItem('weddingAccess');
+        const hasAccess = sessionAccess === 'true' || localAccess === 'true';
+        
+        console.log('Session:', sessionAccess);
+        console.log('Local:', localAccess);
+        console.log('Sprawdzam dostęp:', hasAccess);
+        
+        if (!hasAccess) {
+            console.log('Brak dostępu - przekierowuję na login');
+            window.location.replace('login.html');
+        } else {
+            console.log('Dostęp OK - ładuję stronę');
+        }
+    </script>
 </body>
 
 </html>

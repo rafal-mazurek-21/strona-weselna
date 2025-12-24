@@ -1,0 +1,18 @@
+# Kod dostępu - nie publikuj na GitHubie!
+KOD_DOSTEPU.txt
+
+# Pliki tymczasowe
+*.tmp
+*.log
+
+# Pliki systemowe
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Foldery IDE
+.vscode/
+.idea/
+
+# Node modules (jeśli kiedyś użyjesz)
+node_modules/

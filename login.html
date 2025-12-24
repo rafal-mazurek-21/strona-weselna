@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Klaudia & Rafał - Zaproszenie</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💍</text></svg>">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #8B7355 0%, #D4AF37 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .login-container {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .login-container h1 {
+            font-size: 2.5rem;
+            color: #8B7355;
+            margin-bottom: 1rem;
+        }
+
+        .login-container p {
+            color: #666;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .emoji {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        input {
+            width: 100%;
+            padding: 1rem;
+            font-size: 1.2rem;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            text-align: center;
+            letter-spacing: 3px;
+            font-family: monospace;
+            margin-bottom: 1rem;
+            transition: border 0.3s;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #D4AF37;
+        }
+
+        button {
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(135deg, #8B7355 0%, #D4AF37 100%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+        }
+
+        .error {
+            color: #d93025;
+            margin-top: 1rem;
+            display: none;
+        }
+
+        .hint {
+            font-size: 0.9rem;
+            color: #999;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-container">
+        <div class="emoji">💍</div>
+        <h1>Klaudia & Rafał</h1>
+        <p>Wpisz kod z zaproszenia</p>
+
+        <form id="loginForm">
+            <input type="text" id="codeInput" placeholder="KOD" maxlength="10" autocomplete="off" required>
+            <button type="submit">Wejdź na stronę</button>
+        </form>
+
+        <p class="error" id="error">Nieprawidłowy kod. Sprawdź zaproszenie.</p>
+        <p class="hint">Kod znajdziesz w zaproszeniu weselnym 💌</p>
+    </div>
+
+    <script>
+        // KOD DOSTĘPU (zapisany w pliku KOD_DOSTEPU.txt)
+        const CORRECT_CODE = 'WESELE2026';
+
+        document.getElementById('loginForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const input = document.getElementById('codeInput');
+            const error = document.getElementById('error');
+            const code = input.value.toUpperCase().trim();
+
+            console.log('Wpisany kod:', code);
+            console.log('Poprawny kod:', CORRECT_CODE);
+
+            if (code === CORRECT_CODE) {
+                console.log('Kod poprawny! Zapisuję dostęp...');
+                // Zapisz w sessionStorage (działa lepiej)
+                sessionStorage.setItem('weddingAccess', 'true');
+                localStorage.setItem('weddingAccess', 'true');
+
+                console.log('Dostęp zapisany. Przekierowuję...');
+
+                // Przekieruj
+                setTimeout(() => {
+                    window.location.replace('index.html');
+                }, 200);
+            } else {
+                console.log('Kod niepoprawny!');
+                error.style.display = 'block';
+                input.value = '';
+                input.style.borderColor = '#d93025';
+
+                setTimeout(() => {
+                    error.style.display = 'none';
+                    input.style.borderColor = '#ddd';
+                }, 3000);
+            }
+        });
+
+        // Automatyczne wielkie litery
+        document.getElementById('codeInput').addEventListener('input', function (e) {
+            e.target.value = e.target.value.toUpperCase();
+        });
+    </script>
+</body>
+
+</html>
