@@ -608,6 +608,158 @@ footer {
     color: #666;
 }
 
+/* Menu Weselne */
+.menu-intro,
+.drinkbar-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.menu-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.menu-card:hover {
+    transform: translateY(-5px);
+}
+
+.menu-card h3 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.menu-time {
+    text-align: center;
+    background: var(--accent-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+    width: 100%;
+}
+
+.menu-list {
+    list-style: none;
+    padding: 0;
+}
+
+.menu-list li {
+    padding: 0.5rem 0;
+    color: #555;
+    font-size: 1.05rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.menu-list li:last-child {
+    border-bottom: none;
+}
+
+.menu-list li:before {
+    content: "✓ ";
+    color: var(--accent-color);
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+.menu-list li.vege {
+    color: #2d7a2d;
+    font-weight: 500;
+}
+
+.menu-legend {
+    text-align: center;
+    background: #f0f8f0;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    margin-top: 2rem;
+    border-left: 4px solid #2d7a2d;
+}
+
+.menu-legend p {
+    color: #2d7a2d;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+/* Drink Bar */
+.drinks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.drink-category {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+}
+
+.highlight-category {
+    background: linear-gradient(135deg, #f9f7f4 0%, #fff 100%);
+    border: 2px solid var(--accent-color);
+    transform: scale(1.02);
+}
+
+.drink-category h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 0.5rem;
+}
+
+.drink-list {
+    list-style: none;
+    padding: 0;
+}
+
+.drink-list li {
+    padding: 0.5rem 0;
+    color: #555;
+    font-size: 1.05rem;
+}
+
+.drink-list li:before {
+    content: "🍸 ";
+    margin-right: 0.5rem;
+}
+
+.drinkbar-note {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+    color: white;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.drinkbar-note strong {
+    font-size: 1.3rem;
+}
+
 .locations-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
