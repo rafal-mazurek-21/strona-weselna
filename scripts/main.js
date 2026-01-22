@@ -47,15 +47,50 @@ window.addEventListener('scroll', function() {
     }
 });
 
-// Obsługa formularza RSVP
+// Obsługa formularza RSVP - wysyłanie do Google Sheets
 document.querySelector('.rsvp-form').addEventListener('submit', function(e) {
     e.preventDefault();
     
-    // Tutaj możesz dodać wysyłanie danych do serwera
-    // Na razie tylko pokazujemy komunikat
+    const form = this;
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalText = submitBtn.textContent;
     
-    alert('Dziękujemy za potwierdzenie obecności! Wkrótce skontaktujemy się z Tobą.');
-    this.reset();
+    // Pokaż loading
+    submitBtn.textContent = 'Wysyłanie...';
+    submitBtn.disabled = true;
+    
+    // Zbierz dane z formularza
+    const formData = new FormData();
+    formData.append('name', form.querySelector('input[name="name"]').value);
+    formData.append('email', form.querySelector('input[name="email"]').value);
+    formData.append('phone', form.querySelector('input[name="phone"]').value);
+    formData.append('people', form.querySelector('select[name="people"]').value);
+    formData.append('diet', form.querySelector('select[name="diet"]').value);
+    formData.append('additional', form.querySelector('textarea[name="additional"]').value);
+    
+    // URL do twojego Google Apps Script
+    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxBL2ADQV9Yi2gr4khMtmgEZj21OpumdqfEIYImW0ARzw9rOL0ZCy-vd8NyLUbROJsN/exec';
+    
+    // Wyślij dane do Google Sheets używając fetch z no-cors
+    fetch(GOOGLE_SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        body: formData
+    })
+    .then(() => {
+        // W trybie no-cors nie możemy sprawdzić odpowiedzi, więc zakładamy sukces
+        alert('Dziękujemy za potwierdzenie obecności! Dane zostały zapisane.');
+        form.reset();
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('Wystąpił błąd podczas wysyłania. Spróbuj ponownie lub skontaktuj się telefonicznie.');
+    })
+    .finally(() => {
+        // Przywróć przycisk
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+    });
 });
 
 // Animacja pojawiania się elementów przy przewijaniu

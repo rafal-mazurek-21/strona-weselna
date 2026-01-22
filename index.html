@@ -91,13 +91,15 @@
                 <div class="person">
                     <img src="zdjecia_para/panna_mloda.jpg" alt="Panna Młoda" class="bride-photo">
                     <h3>Klaudia</h3>
-                    <p>Miłośniczka książek i zimowej herbaty. Żelki to moje ulubione słodkości – zawsze muszą być pod ręką.
+                    <p>Miłośniczka książek i zimowej herbaty. Żelki to moje ulubione słodkości – zawsze muszą być pod
+                        ręką.
                         Uwielbiam planowanie i organizację, a zawodowo działam w marketingu, zajmując się reklamami.</p>
                 </div>
                 <div class="person">
                     <img src="zdjecia_para/pan_mlody.jpg" alt="Pan Młody">
                     <h3>Rafał</h3>
-                    <p>Miłośnik kawy i długich spacerów. Czekolada to jego ulubione słodycze. Uwielbia logikę i porządek, a zawodowo działa w świecie danych, analiz i programowania.</p>
+                    <p>Miłośnik kawy i długich spacerów. Czekolada to jego ulubione słodycze. Uwielbia logikę i
+                        porządek, a zawodowo działa w świecie danych, analiz i programowania.</p>
                 </div>
             </div>
             <div class="love-story">
@@ -232,7 +234,7 @@
     <section id="menu" class="section">
         <div class="container">
             <h2>Menu Weselne</h2>
-            
+
             <div class="menu-intro">
                 <p>Przygotowaliśmy dla Was wykwintne menu z najlepszych składników. Smacznego! 🍽️</p>
             </div>
@@ -349,7 +351,7 @@
                     </ul>
                 </div>
             </div>
-            
+
             <div class="menu-legend">
                 <p>🌱 - Danie wegetariańskie</p>
             </div>
@@ -359,7 +361,7 @@
     <section id="drinkbar" class="section bg-light">
         <div class="container">
             <h2>Napoje</h2>
-            
+
             <div class="drinkbar-intro">
                 <p>Przez całą noc do Waszej dyspozycji będą napoje i profesjonalny drink bar! 🍹</p>
             </div>
@@ -379,7 +381,8 @@
 
                 <div class="drink-category highlight-category">
                     <h3>🍹 Drink Bar</h3>
-                    <p style="text-align: center; color: #666; margin-bottom: 1rem; font-style: italic;">Barman przygotuje dla Ciebie:</p>
+                    <p style="text-align: center; color: #666; margin-bottom: 1rem; font-style: italic;">Barman
+                        przygotuje dla Ciebie:</p>
                     <ul class="drink-list">
                         <li>Mojito</li>
                         <li>Aperol Spritz</li>
@@ -406,7 +409,8 @@
             </div>
 
             <div class="drinkbar-note">
-                <p>💡 <strong>Drink Bar czynny do 1.00 w nocy!</strong> Barman przygotuje dla Ciebie dowolny drink na życzenie!</p>
+                <p>💡 <strong>Drink Bar czynny do 1.00 w nocy!</strong> Barman przygotuje dla Ciebie dowolny drink na
+                    życzenie!</p>
             </div>
         </div>
     </section>
@@ -437,8 +441,10 @@
             <div class="rsvp-container">
                 <div class="rsvp-left">
                     <h3>Daj znać, że będziesz z Nami!</h3>
-                    <p>Twoja obecność jest dla nas bardzo ważna, dlatego chcielibyśmy, abyś dołączył do nas w tej wyjątkowej chwili.</p>
-                    <p>Prosimy o potwierdzenie, abyśmy mogli odpowiednio przygotować miejsce i wspólnie celebrować ten wyjątkowy dzień.</p>
+                    <p>Twoja obecność jest dla nas bardzo ważna, dlatego chcielibyśmy, abyś dołączył do nas w tej
+                        wyjątkowej chwili.</p>
+                    <p>Prosimy o potwierdzenie, abyśmy mogli odpowiednio przygotować miejsce i wspólnie celebrować ten
+                        wyjątkowy dzień.</p>
                     <p>Skontaktuj się z nami lub zrób to poprzez formularz.</p>
                     <div class="contact-info">
                         <div class="contact-item">
@@ -453,22 +459,22 @@
                 </div>
                 <div class="rsvp-right">
                     <form class="rsvp-form">
-                        <input type="text" placeholder="Imię i nazwisko" required>
-                        <input type="email" placeholder="Email" required>
-                        <input type="tel" placeholder="Telefon" required>
-                        <select required>
+                        <input type="text" name="name" placeholder="Imię i nazwisko" required>
+                        <input type="email" name="email" placeholder="Email" required>
+                        <input type="tel" name="phone" placeholder="Telefon" required>
+                        <select name="people" required>
                             <option value="">Liczba osób</option>
                             <option value="1">1 osoba</option>
                             <option value="2">2 osoby</option>
                             <option value="3">3 osoby</option>
                             <option value="4">4 osoby</option>
                         </select>
-                        <select required>
+                        <select name="diet" required>
                             <option value="">Dieta</option>
                             <option value="standardowa">Standardowa</option>
                             <option value="wegetarianska">Wegetariańska</option>
                         </select>
-                        <textarea placeholder="Dodatkowe informacje (alergie, itp.)"></textarea>
+                        <textarea name="additional" placeholder="Dodatkowe informacje (alergie, itp.)"></textarea>
                         <button type="submit" class="btn">Potwierdź obecność</button>
                     </form>
                 </div>
@@ -509,17 +515,17 @@
     </div>
 
     <script src="scripts/main.js"></script>
-    
+
     <script>
         // Sprawdź czy użytkownik ma dostęp
         const sessionAccess = sessionStorage.getItem('weddingAccess');
         const localAccess = localStorage.getItem('weddingAccess');
         const hasAccess = sessionAccess === 'true' || localAccess === 'true';
-        
+
         console.log('Session:', sessionAccess);
         console.log('Local:', localAccess);
         console.log('Sprawdzam dostęp:', hasAccess);
-        
+
         if (!hasAccess) {
             console.log('Brak dostępu - przekierowuję na login');
             window.location.replace('login.html');
