@@ -198,7 +198,7 @@ if (languageBtn && languageDropdown) {
                 schedule: 'Harmonogram',
                 menu: 'Menu',
                 drinkbar: 'Drink Bar',
-                gallery: 'Galeria',
+                gallery: 'Nasze zaręczyny',
                 rsvp: 'Potwierdzenie'
             },
             hero: {
@@ -210,7 +210,9 @@ if (languageBtn && languageDropdown) {
             couple: {
                 title: 'Para Młoda',
                 story: 'Nasza Historia',
-                storyText: 'Poznaliśmy się 9 lat temu w liceum, w tej samej klasie. Od pierwszych wspólnych chwil wiedzieliśmy, że to coś wyjątkowego. Nasza przyjaźń szybko przerodziła się w miłość, która z każdym rokiem stawała się coraz silniejsza. W lipcu 2024 roku, podczas romantycznej podróży do Rzymu, Rafał oświadczył się Klaudii w magicznej atmosferze Wiecznego Miasta. Teraz nie możemy się doczekać, aby podzielić się naszym szczęściem z Wami!'
+                storyText: 'Poznaliśmy się 9 lat temu w liceum, w tej samej klasie. Od pierwszych wspólnych chwil wiedzieliśmy, że to coś wyjątkowego. Nasza przyjaźń szybko przerodziła się w miłość, która z każdym rokiem stawała się coraz silniejsza. W lipcu 2024 roku, podczas romantycznej podróży do Rzymu, Rafał oświadczył się Klaudii w magicznej atmosferze Wiecznego Miasta. Teraz nie możemy się doczekać, aby podzielić się naszym szczęściem z Wami!',
+                klaudiaDesc: 'Miłośniczka książek i zimowej herbaty. Żelki to moje ulubione słodkości – zawsze muszą być pod ręką. Uwielbiam planowanie i organizację, a zawodowo działam w marketingu, zajmując się reklamami.',
+                rafalDesc: 'Miłośnik kawy i długich spacerów. Czekolada to moje ulubione słodycze. Uwielbiam logikę i porządek, a zawodowo działam w świecie danych, analiz i programowania.'
             },
             rsvp: {
                 title: 'Potwierdzenie Obecności',
@@ -221,6 +223,7 @@ if (languageBtn && languageDropdown) {
                 name: 'Imię i nazwisko',
                 email: 'Email',
                 phone: 'Telefon',
+                phoneNumber: 'Telefon',
                 people: 'Liczba osób',
                 diet: 'Dieta',
                 standard: 'Standardowa',
@@ -251,7 +254,7 @@ if (languageBtn && languageDropdown) {
                 ceremonyDesc: 'Parafia św. Marcina w Zemborzycach',
                 ceremonyNote: 'Prosimy o przybycie 15 minut wcześniej',
                 arrival: 'Dojazd do Hotelu Kmicic',
-                arrivalDesc: 'Życzenia dla Młodej Pary przyjmujemy przed salą weselną',
+                arrivalDesc: 'Para Młoda przyjmuje życzenia przed salą weselną',
                 welcome: 'Powitanie Gości',
                 welcomeDesc: 'Przywitanie chlebem i solą, toast szampański',
                 dinner: 'Obiad Weselny',
@@ -294,8 +297,9 @@ if (languageBtn && languageDropdown) {
                 andMore: '...i wiele innych!'
             },
             gallery: {
-                title: 'Galeria'
+                title: 'Nasze zaręczyny'
             },
+            menuPlaceholder: '💡 Menu zostanie wkrótce uzupełnione 😊',
             footer: {
                 share: 'Udostępnij stronę',
                 qr: 'Zeskanuj kod QR, aby otworzyć stronę',
@@ -313,7 +317,7 @@ if (languageBtn && languageDropdown) {
                 schedule: 'Schedule',
                 menu: 'Menu',
                 drinkbar: 'Drink Bar',
-                gallery: 'Gallery',
+                gallery: 'Our Engagement',
                 rsvp: 'RSVP'
             },
             hero: {
@@ -325,7 +329,9 @@ if (languageBtn && languageDropdown) {
             couple: {
                 title: 'The Couple',
                 story: 'Our Story',
-                storyText: 'We met 9 years ago in high school, in the same class. From the first moments together, we knew it was something special. Our friendship quickly turned into love, which grew stronger with each passing year. In July 2024, during a romantic trip to Rome, Rafał proposed to Klaudia in the magical atmosphere of the Eternal City. Now we cannot wait to share our happiness with you!'
+                storyText: 'We met 9 years ago in high school, in the same class. From the first moments together, we knew it was something special. Our friendship quickly turned into love, which grew stronger with each passing year. In July 2024, during a romantic trip to Rome, Rafał proposed to Klaudia in the magical atmosphere of the Eternal City. Now we cannot wait to share our happiness with you!',
+                klaudiaDesc: 'A lover of books and winter tea. Gummy candies are my favorite sweets – they always have to be within reach. I love planning and organization, and professionally I work in marketing, managing advertisements.',
+                rafalDesc: 'A lover of coffee and long walks. Chocolate is my favorite sweet. I love logic and order, and professionally I work in the world of data, analysis, and programming.'
             },
             rsvp: {
                 title: 'RSVP',
@@ -335,7 +341,8 @@ if (languageBtn && languageDropdown) {
                 text3: 'Contact us or do it through the form.',
                 name: 'Full name',
                 email: 'Email',
-                phone: 'Phone',
+                phone: 'Phone Number',
+                phoneNumber: 'Phone Number',
                 people: 'Number of people',
                 diet: 'Diet',
                 standard: 'Standard',
@@ -366,7 +373,7 @@ if (languageBtn && languageDropdown) {
                 ceremonyDesc: 'St. Martin\'s Parish in Zemborzyce',
                 ceremonyNote: 'Please arrive 15 minutes earlier',
                 arrival: 'Arrival at Hotel Kmicic',
-                arrivalDesc: 'Wishes for the Newlyweds will be received in front of the wedding hall',
+                arrivalDesc: 'The Newlyweds will receive wishes in front of the wedding hall',
                 welcome: 'Welcome Guests',
                 welcomeDesc: 'Welcome with bread and salt, champagne toast',
                 dinner: 'Wedding Dinner',
@@ -409,8 +416,9 @@ if (languageBtn && languageDropdown) {
                 andMore: '...and many more!'
             },
             gallery: {
-                title: 'Gallery'
+                title: 'Our Engagement'
             },
+            menuPlaceholder: '💡 The menu will be updated soon 😊',
             footer: {
                 share: 'Share the page',
                 qr: 'Scan the QR code to open the page',
@@ -456,6 +464,12 @@ if (languageBtn && languageDropdown) {
             if (storySection) {
                 storySection.querySelector('h3').textContent = t.couple.story;
                 storySection.querySelector('p').textContent = t.couple.storyText;
+            }
+            // Tłumaczenie opisów Klaudii i Rafała
+            const persons = coupleSection.querySelectorAll('.person');
+            if (persons.length >= 2) {
+                persons[0].querySelector('p').textContent = t.couple.klaudiaDesc;
+                persons[1].querySelector('p').textContent = t.couple.rafalDesc;
             }
         }
 
@@ -538,6 +552,11 @@ if (languageBtn && languageDropdown) {
             menuSection.querySelector('h2').textContent = t.menu.title;
             const menuIntro = menuSection.querySelector('.menu-intro');
             if (menuIntro) menuIntro.querySelector('p').textContent = t.menu.intro;
+            // Tłumaczenie placeholder dla menu
+            const menuNote = menuSection.querySelector('.drinkbar-note');
+            if (menuNote) {
+                menuNote.querySelector('p').innerHTML = `<strong>${t.menuPlaceholder}</strong>`;
+            }
             const menuCards = menuSection.querySelectorAll('.menu-card');
             if (menuCards.length > 0) {
                 menuCards[0].querySelector('h3').textContent = `🥗 ${t.menu.appetizers}`;

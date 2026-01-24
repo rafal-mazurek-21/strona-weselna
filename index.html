@@ -50,7 +50,7 @@
             <a href="#harmonogram">Harmonogram</a>
             <a href="#menu">Menu</a>
             <a href="#drinkbar">Drink Bar</a>
-            <a href="#galeria">Galeria</a>
+            <a href="#galeria">Nasze zaręczyny</a>
             <a href="#potwierdzenie">Potwierdzenie</a>
         </div>
     </nav>
@@ -81,13 +81,13 @@
                     <span class="countdown-label">sekund</span>
                 </div>
             </div>
-            
-            <!-- Floating RSVP Button - pojawia się po 1 sekundzie -->
-            <a href="#potwierdzenie" class="floating-rsvp-btn" id="floatingRsvpBtn">
-                Potwierdzenie obecności
-            </a>
         </div>
     </section>
+    
+    <!-- Floating RSVP Button - pojawia się po 1 sekundzie -->
+    <a href="#potwierdzenie" class="floating-rsvp-btn" id="floatingRsvpBtn">
+        💌 Potwierdzenie obecności
+    </a>
 
     <section id="para-mloda" class="section">
         <div class="container">
@@ -172,14 +172,14 @@
                     <div class="timeline-content">
                         <h3>Ceremonia Ślubna</h3>
                         <p>Parafia św. Marcina w Zemborzycach</p>
-                        <p>Prosimy o przybycie 15 minut wcześniej</p>
+                        <p>Prosimy o przybycie <strong>15 minut wcześniej</strong></p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-time">16:15</div>
                     <div class="timeline-content">
                         <h3>Dojazd do Hotelu Kmicic</h3>
-                        <p>Życzenia dla Młodej Pary przyjmujemy przed salą weselną</p>
+                        <p>Para Młoda przyjmuje życzenia przed salą weselną</p>
                     </div>
                 </div>
                 <div class="timeline-item">
@@ -304,19 +304,14 @@
 
     <section id="galeria" class="section bg-light">
         <div class="container">
-            <h2>Galeria</h2>
+            <h2>Nasze zaręczyny</h2>
             <div class="gallery-grid">
-                <img src="images/ceremonia/kosciol-marcin.jpg" alt="Kościół św. Marcina">
-                <img src="images/ceremonia/kosciol-marcin-2.jpg" alt="Kościół św. Marcina - wnętrze">
-                <img src="images/wesele/hotel-kmicic.jpg" alt="Hotel Kmicic">
-                <img src="zdjecia_hotel/sala.jpg" alt="Sala weselna w Hotelu Kmicic">
-                <img src="zdjecia_hotel/4FGCX7yX.jpg" alt="Stoły weselne w Hotelu Kmicic">
-                <img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?w=600" alt="Zdjęcie 1">
-                <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=600" alt="Zdjęcie 2">
-                <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=600" alt="Zdjęcie 3">
-                <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=600" alt="Zdjęcie 4">
-                <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=600" alt="Zdjęcie 5">
-                <img src="https://images.unsplash.com/photo-1460978812857-470ed1c77af0?w=600" alt="Zdjęcie 6">
+                <img src="images/galeria/1085b1fe-e15e-47a4-bc84-ee4119168b5f.jpg" alt="Zdjęcie z galerii">
+                <img src="images/galeria/228fc019-8d1b-4b1f-a31c-b841faefcc95.jpg" alt="Zdjęcie z galerii">
+                <img src="images/galeria/17d1e1c2-e388-4e53-80ae-529c3cde4510.jpg" alt="Zdjęcie z galerii">
+                <img src="images/galeria/8df5faf1-9724-4e4d-a438-7d27e0d3a549.jpg" alt="Zdjęcie z galerii">
+                <img src="images/galeria/513973ee-6f20-4a2c-afee-8d96a011eb19.jpg" alt="Zdjęcie z galerii">
+                <img src="images/galeria/f26f9ab0-bed0-4ced-ac90-362516bedb63.jpg" alt="Zdjęcie z galerii">
             </div>
         </div>
     </section>
@@ -424,6 +419,11 @@
             const rsvpBtn = document.getElementById('floatingRsvpBtn');
             if (rsvpBtn) {
                 rsvpBtn.classList.add('show');
+                
+                // Ukryj przycisk po kliknięciu
+                rsvpBtn.addEventListener('click', function() {
+                    this.style.display = 'none';
+                });
             }
         }, 1000);
         
@@ -443,7 +443,7 @@
                     personSection.innerHTML = `
                         <h4 class="person-title">Osoba ${i}</h4>
                         <input type="text" name="person_${i}_name" placeholder="Imię i nazwisko" required>
-                        <select name="person_${i}_age" required>
+                        <select name="person_${i}_age" class="age-select" required>
                             <option value="">Wiek</option>
                             <option value="dziecko_0_2">Dziecko (0-2 lata)</option>
                             <option value="dziecko_3_5">Dziecko (3-5 lat)</option>
@@ -451,14 +451,40 @@
                             <option value="mlodziez_11_17">Młodzież (11-17 lat)</option>
                             <option value="dorosly">Osoba dorosła</option>
                         </select>
-                        <select name="person_${i}_diet" required>
+                        <select name="person_${i}_diet" class="diet-select" required>
                             <option value="">Dieta</option>
                             <option value="standardowa">Standardowa</option>
                             <option value="wegetarianska">Wegetariańska</option>
+                            <option value="weganska">Wegańska</option>
                         </select>
                     `;
                     
                     peopleFieldsContainer.appendChild(personSection);
+                    
+                    // Dodaj event listener dla wyboru wieku
+                    const ageSelect = personSection.querySelector('.age-select');
+                    const dietSelect = personSection.querySelector('.diet-select');
+                    
+                    ageSelect.addEventListener('change', function() {
+                        const ageValue = this.value;
+                        // Sprawdź czy to dziecko (zaczyna się od "dziecko_")
+                        if (ageValue.startsWith('dziecko_')) {
+                            // Ustaw dietę na Standardowa i zablokuj możliwość zmiany
+                            dietSelect.value = 'standardowa';
+                            dietSelect.disabled = true;
+                            // Usuń inne opcje diety, zostaw tylko Standardowa
+                            dietSelect.innerHTML = '<option value="standardowa" selected>Standardowa</option>';
+                        } else {
+                            // Jeśli nie dziecko, przywróć wszystkie opcje diety
+                            dietSelect.disabled = false;
+                            dietSelect.innerHTML = `
+                                <option value="">Dieta</option>
+                                <option value="standardowa">Standardowa</option>
+                                <option value="wegetarianska">Wegetariańska</option>
+                                <option value="weganska">Wegańska</option>
+                            `;
+                        }
+                    });
                 }
             }
         });
