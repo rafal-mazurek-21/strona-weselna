@@ -96,7 +96,8 @@
                 <div class="person">
                     <img src="zdjecia_para/panna_mloda.jpg" alt="Panna Młoda" class="bride-photo">
                     <h3>Klaudia</h3>
-                    <p>Miłośniczka książek i zimowej herbaty. Żelki to moje ulubione słodkości – zawsze muszą być pod ręką.
+                    <p>Miłośniczka książek i zimowej herbaty. Żelki to moje ulubione słodkości – zawsze muszą być pod
+                        ręką.
                         Uwielbiam planowanie i organizację, a zawodowo działam w marketingu, zajmując się reklamami.</p>
                 </div>
                 <div class="person">
@@ -236,8 +237,7 @@
 
     <section id="menu" class="section">
         <div class="container">
-            <h2>Menu Weselne</h2>
-            
+            <h2>Menu Weselne</h2>            
             <div class="drinkbar-note">
                 <p>💡 <strong>Menu zostanie wkrótce uzupełnione 😊</strong></p>
             </div>
@@ -247,7 +247,7 @@
     <section id="drinkbar" class="section bg-light">
         <div class="container">
             <h2>Napoje</h2>
-            
+
             <div class="drinkbar-intro">
                 <p>Przez całą noc do Waszej dyspozycji będą napoje i profesjonalny drink bar! 🍹</p>
             </div>
@@ -267,7 +267,8 @@
 
                 <div class="drink-category highlight-category">
                     <h3>🍹 Drink Bar</h3>
-                    <p style="text-align: center; color: #666; margin-bottom: 1rem; font-style: italic;">Barman przygotuje dla Ciebie:</p>
+                    <p style="text-align: center; color: #666; margin-bottom: 1rem; font-style: italic;">Barman
+                        przygotuje dla Ciebie:</p>
                     <ul class="drink-list">
                         <li>Mojito</li>
                         <li>Espresso Martini</li>
@@ -294,7 +295,8 @@
             </div>
 
             <div class="drinkbar-note">
-                <p>💡 <strong>Drink Bar czynny do 1.00 w nocy!</strong> Barman przygotuje dla Ciebie dowolny drink na życzenie!</p>
+                <p>💡 <strong>Drink Bar czynny do 1.00 w nocy!</strong> Barman przygotuje dla Ciebie dowolny drink na
+                    życzenie!</p>
             </div>
         </div>
     </section>
@@ -325,8 +327,10 @@
             <div class="rsvp-container">
                 <div class="rsvp-left">
                     <h3>Daj znać, że będziesz z Nami!</h3>
-                    <p>Twoja obecność jest dla nas bardzo ważna, dlatego chcielibyśmy, abyś dołączył do nas w tej wyjątkowej chwili.</p>
-                    <p>Prosimy o potwierdzenie, abyśmy mogli odpowiednio przygotować miejsce i wspólnie celebrować ten wyjątkowy dzień.</p>
+                    <p>Twoja obecność jest dla nas bardzo ważna, dlatego chcielibyśmy, abyś dołączył do nas w tej
+                        wyjątkowej chwili.</p>
+                    <p>Prosimy o potwierdzenie, abyśmy mogli odpowiednio przygotować miejsce i wspólnie celebrować ten
+                        wyjątkowy dzień.</p>
                     <p>Skontaktuj się z nami lub zrób to poprzez formularz.</p>
                     <div class="contact-info">
                         <div class="contact-item">
@@ -372,8 +376,9 @@
         <div class="container">
             <div class="qr-section">
                 <h3>Udostępnij stronę</h3>
-                <img src="kod_qr_wesele.jpg" alt="Kod QR do strony" class="qr-code">
+                <img src="kod_qr_wesele_nowy.jpg" alt="Kod QR do strony" class="qr-code">
                 <p>Zeskanuj kod QR, aby otworzyć stronę</p>
+                <p style="font-size: 0.9rem; color: #999; margin-top: 0.5rem;">wesele-2026.pl</p>
             </div>
             <p>&copy; 2026 Klaudia & Rafał - Z miłością dla naszych gości</p>
         </div>
@@ -396,17 +401,17 @@
     </div>
 
     <script src="scripts/main.js"></script>
-    
+
     <script>
         // Sprawdź czy użytkownik ma dostęp
         const sessionAccess = sessionStorage.getItem('weddingAccess');
         const localAccess = localStorage.getItem('weddingAccess');
         const hasAccess = sessionAccess === 'true' || localAccess === 'true';
-        
+
         console.log('Session:', sessionAccess);
         console.log('Local:', localAccess);
         console.log('Sprawdzam dostęp:', hasAccess);
-        
+
         if (!hasAccess) {
             console.log('Brak dostępu - przekierowuję na login');
             window.location.replace('login.html');
